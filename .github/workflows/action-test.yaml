@@ -1,0 +1,11 @@
+name: Python 3.8 Workflow
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Teste step
+          run: |
+            echo ${{ github.repository }}
