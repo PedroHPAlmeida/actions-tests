@@ -9,3 +9,8 @@ jobs:
         - name: Teste step
           run: |
             echo ${{ github.repository }}
+            echo ${{ github.base_ref }}
+            echo ${{ github.action_ref }}
+            echo ${{ github.repository }}
+            echo ${{ github.repositoryUrl }}
+            echo ${{ github.repository_owner }}
