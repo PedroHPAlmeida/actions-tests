@@ -5,12 +5,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v3
         - name: Teste step
           run: |
             echo ${{ github.repository }}
-            echo ${{ github.base_ref }}
-            echo ${{ github.action_ref }}
-            echo ${{ github.repository }}
-            echo ${{ github.repositoryUrl }}
             echo ${{ github.repository_owner }}
+            echo ${{ github.repositoryUrl }}
+            echo ${{ github.ref }}
+            echo ${{ github.ref_name }}
+            echo ${{ github.actor }}
+            
