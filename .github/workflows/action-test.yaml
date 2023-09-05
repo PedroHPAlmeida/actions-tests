@@ -8,5 +8,4 @@ jobs:
     steps:
       - name: Test
         id: test
-        uses: PedroHPAlmeida/prerequisites-action@v1
-        
+        uses: PedroHPAlmeida/prerequisites-action@v3
