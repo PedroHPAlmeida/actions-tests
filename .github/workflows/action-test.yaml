@@ -3,14 +3,5 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Teste step
-          run: |
-            echo ${{ github.repository }}
-            echo ${{ github.repository_owner }}
-            echo ${{ github.repositoryUrl }}
-            echo ${{ github.ref }}
-            echo ${{ github.ref_name }}
-            echo ${{ github.actor }}
-            
+    uses: PedroHPAlmeida/prerequisites-action@v1
+        
