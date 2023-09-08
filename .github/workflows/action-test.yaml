@@ -9,3 +9,6 @@ jobs:
       - name: Test
         id: test
         uses: PedroHPAlmeida/prerequisites-action@v0.4
+        with:
+          DEFAULT_BRANCH: 'master'
+          BRANCHES: 'branch1,branch2,branch3'
