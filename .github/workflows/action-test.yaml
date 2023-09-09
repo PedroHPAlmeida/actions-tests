@@ -5,11 +5,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Test
-    permissions: write-all
     steps:
       - name: Test
         id: test
-        uses: PedroHPAlmeida/prerequisites-action@master
+        uses: PedroHPAlmeida/prerequisites-action@v0.7
         with:
           DEFAULT_BRANCH: 'master'
           BRANCHES: 'branch1,branch2,branch3'
