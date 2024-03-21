@@ -20,9 +20,9 @@ jobs:
       - name: Zip a folder
         run: |
           zip -r deploy.zip src/
-            - name: Upload a Build Artifact
 
-      - uses: actions/upload-artifact@v4.3.1
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: 'deploy.zip'
           path: 'deploy.zip'
