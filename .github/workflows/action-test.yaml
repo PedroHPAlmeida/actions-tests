@@ -9,4 +9,4 @@ jobs:
 
       - name: Zip a folder
         run: |
-          echo Pedro Henrique Pereira Almeida
+          pwd && ls -la
