@@ -9,4 +9,4 @@ jobs:
 
       - name: Zip a folder
         run: |
-          zip -r zipado.zip .github/
+          zip -r zipado.zip .github/ && ls -la
