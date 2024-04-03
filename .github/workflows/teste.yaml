@@ -1,0 +1,16 @@
+name: Teste
+run-name: Teste
+on:
+  workflow_call:
+    inputs:
+      input-json:
+        type: string
+        default: ''
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Teste
+        run: |
+          echo ${{ fromJSON(inputs.input-json) }}
