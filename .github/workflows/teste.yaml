@@ -11,6 +11,12 @@ jobs:
   teste:
     runs-on: ubuntu-latest
     steps:
-      - name: Teste
+      - name: Exportar variáveis de ambiente
         run: |
-          echo ${{ fromJSON(inputs.input-json) }}
+          # Converter a string JSON para variáveis de ambiente
+          for key in $(echo "${{ fromJSON(inputs.input-json) }}" | jq -r 'keys[]'); do
+            value=$(echo "${{ fromJSON(inputs.input-json) }}" | jq -r ".$key")
+            export "$key"="$value"
+          done
+          # Exibir as variáveis de ambiente exportadas
+          env
