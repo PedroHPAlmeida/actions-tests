@@ -14,8 +14,8 @@ jobs:
       - name: Exportar variáveis de ambiente
         run: |
           # Converter a string JSON para variáveis de ambiente
-          for key in $(echo "${{ fromJSON(inputs.input-json) }}" | jq -r 'keys[]'); do
-            value=$(echo "${{ fromJSON(inputs.input-json) }}" | jq -r ".$key")
+          for key in $(fromJSON(inputs.input-json) | jq -r 'keys[]'); do
+            value=$(fromJSON(inputs.input-json) | jq -r ".$key")
             export "$key"="$value"
           done
           # Exibir as variáveis de ambiente exportadas
