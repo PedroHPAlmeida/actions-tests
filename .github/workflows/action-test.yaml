@@ -5,4 +5,4 @@ jobs:
   test:
     uses: ./.github/workflows/teste.yaml
     with:
-      input-json: '\{"chave": "valor"\}'
+      input-json: '{"chave": "valor"}'
