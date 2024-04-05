@@ -5,7 +5,7 @@ jobs:
   test:
     runs-on: ubuntu-latest 
     steps:
-      - uses: PedroHPAlmeida/terraform-export-envs-action@1.1
+      - uses: PedroHPAlmeida/terraform-export-envs-action@1.2
         id: Teste
         with:
           tf_variables: '{"chave": "valor"}'
