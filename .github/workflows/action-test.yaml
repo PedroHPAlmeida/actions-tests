@@ -3,6 +3,6 @@ on: [push]
 
 jobs:
   test:
-    uses: ./.github/workflows/teste.yaml
+    uses: PedroHPAlmeida/terraform-export-envs-action@master
     with:
-      input-json: '{"chave": "valor"}'
+      tf_variables: '{"chave": "valor"}'
