@@ -3,6 +3,6 @@ on: [push]
 
 jobs:
   test:
-    uses: PedroHPAlmeida/terraform-export-envs-action@1.0
+    uses: PedroHPAlmeida/terraform-export-envs-action@1.1
     with:
       tf_variables: '{"chave": "valor"}'
