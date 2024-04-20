@@ -2,12 +2,9 @@ name: Python 3.8 Workflow
 on: [push]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest 
-    steps:
-      - uses: PedroHPAlmeida/terraform-export-envs-action@1.3
-        id: Teste
-        with:
-          tf_variables: '{"chave": "valor", "pedro": "henrique"}'
-      - name: Echo
-        run: printenv
+    deploy:
+      uses: PedroHPAlmeida/deploy-docker-render@v0.6
+      with:
+        render-api-key: ''
+        service-id: ''
+        image-url: ''
