@@ -3,8 +3,11 @@ on: [push]
 
 jobs:
     deploy:
-      uses: PedroHPAlmeida/deploy-docker-render@v0.6
-      with:
-        render-api-key: ''
-        service-id: ''
-        image-url: ''
+      runs-on: ubuntu-latest   
+      steps:
+        - name: Teste
+          uses: PedroHPAlmeida/deploy-docker-render@v0.6
+          with:
+            render-api-key: ''
+            service-id: ''
+            image-url: ''
